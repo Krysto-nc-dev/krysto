@@ -1,4 +1,6 @@
 import '@/assets/styles/global.css'
+import Footer from '@/components/layout/Footer'
+import Navbar from '@/components/layout/Navbar'
 
 export const metadata = {
   title: 'Krysto || Clean, Create, Recycle, Repeat',
@@ -10,7 +12,9 @@ const MainLayout = ({ children }) => {
   return (
     <html lang="fr">
       <body>
+        <Navbar/>
         <div>{children}</div>
+        <Footer />
       </body>
     </html>
   )
