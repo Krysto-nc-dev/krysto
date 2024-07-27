@@ -6,10 +6,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-neutral text-primary-foreground py-6">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+    <footer className="bg-gray-800 text-primary py-4">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-2">
         <div className="mb-4 md:mb-0">
-          <Image className="h-16 w-auto" src={logo} alt="Krysto" />
+          <Image className="h-10 w-auto" src={logo} alt="Krysto" />
         </div>
 
         {/* <div className="flex flex-col md:flex-row items-center md:space-x-6 mb-4 md:mb-0">

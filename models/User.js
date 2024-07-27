@@ -1,5 +1,4 @@
 import { Schema, model, models } from 'mongoose'
-import bcrypt from 'bcryptjs'
 
 const UserSchema = new Schema(
   {
@@ -18,6 +17,9 @@ const UserSchema = new Schema(
     googleId: {
       type: String,
     },
+    dolibarrId: {
+      type: String,
+    },
     password: {
       type: String,
     },
@@ -31,14 +33,14 @@ const UserSchema = new Schema(
       default: 'user',
       required: [true, 'Le rôle est requis'],
     },
+    plan: {
+      type: String,
+      enum: ['FREE', 'PREMIUM', 'PRO'],
+      default: 'FREE',
+    },
   },
   { timestamps: true },
 )
-
-// Méthode pour comparer les mots de passe
-UserSchema.methods.comparePassword = function (candidatePassword) {
-  return bcrypt.compare(candidatePassword, this.password)
-}
 
 const User = models.User || model('User', UserSchema)
 
