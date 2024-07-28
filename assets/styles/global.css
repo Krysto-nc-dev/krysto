@@ -97,3 +97,11 @@
     font-family: 'Lato', sans-serif;
   }
 }
+
+
+.hero {
+  background-image: url('../../assets/images/home_hero.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20rem
+}
