@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react'
+import Link from 'next/link';
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { signOut, useSession, getProviders } from 'next-auth/react'
 import { Button } from '../ui/button'
@@ -30,73 +31,71 @@ const Navbar = () => {
         >
           <ul className="flex flex-col md:flex-row md:space-x-6">
             <li>
-              <a
+              <Link
                 href="/"
                 className="block py-2 px-4 text-primary-foreground hover:text-secondary"
               >
                 Accueil
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/products"
                 className="block py-2 px-4 text-primary-foreground hover:text-secondary"
               >
                 Produits
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/services"
                 className="block py-2 px-4 text-primary-foreground hover:text-secondary"
               >
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/about"
                 className="block py-2 px-4 text-primary-foreground hover:text-secondary"
               >
                 À propos
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/contact"
                 className="block py-2 px-4 text-primary-foreground hover:text-secondary"
               >
                 Contact
-              </a>
+              </Link>
             </li>
 
             {session && (
               <>
                 <li>
                   <li>
-                    <a
+                    <Link
                       href="/dashboard"
                       className="block py-2 px-4 text-primary-foreground hover:text-secondary"
                     >
-                      Contact
-                    </a>
+                     Dashboard
+                    </Link>
                   </li>
                 </li>
                 <li>
-                  <Button
-                  onClick={() => signOut()}
-                  >Deconnexion</Button>
+                  <Button onClick={() => signOut()}>Deconnexion</Button>
                 </li>
               </>
             )}
             {!session && (
               <li>
-                <a
+                <Link
                   href="/users/register"
                   className="block py-2 px-4 text-primary-foreground hover:text-secondary"
                 >
                   Connexion ou Inscription
-                </a>
+                </Link>
               </li>
             )}
           </ul>
