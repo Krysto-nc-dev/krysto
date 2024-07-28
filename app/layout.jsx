@@ -2,6 +2,7 @@ import '@/assets/styles/global.css'
 import AuthProvider from '@/components/AuthProvider'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
+import { Toaster } from '@/components/ui/toaster'
 
 export const metadata = {
   title: 'Krysto || Clean, Create, Recycle, Repeat',
@@ -17,7 +18,8 @@ const MainLayout = ({ children }) => {
       <html lang="fr">
         <body>
           <Navbar />
-          <main>{children}</main>
+          <main className='bg-gray-100 pt-16 '>{children}</main>
+          <Toaster />
           <Footer />
         </body>
       </html>

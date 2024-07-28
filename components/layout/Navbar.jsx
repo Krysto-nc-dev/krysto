@@ -46,7 +46,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className={`fixed text-primary top-0 left-0 w-full z-50 transition-all duration-300  ${scrolled ? 'bg-transparent bg-opacity-80 backdrop-blur-lg' : 'bg-gray-800'}`}>
+    <header className={`fixed text-primary top-0 left-0 w-full z-50 transition-all duration-300  ${scrolled ? 'bg-transparent bg-opacity-80 backdrop-blur-lg text-gray-800' : 'bg-gray-800'}`}>
       <div className="container mx-auto flex justify-between items-center p-3 flex-col md:flex-row">
         <div className="w-full flex justify-between items-center md:w-auto">
           <div className="text-2xl font-bold max-md:ml-4">KRYSTO</div>
