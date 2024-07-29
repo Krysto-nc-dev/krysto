@@ -9,7 +9,7 @@ const Hero = () => {
       style={{ backgroundImage: `url(${heroImage.src})` }}
     >
       {/* Overlay sombre */}
-      <div className="absolute inset-0 bg-blue-400 bg-opacity-30"></div> 
+      <div className="absolute inset-0 bg-primary-dark bg-opacity-75"></div> 
       
       {/* Contenu du texte centré */}
       <div className="text-primary-color text-center relative z-10 flex flex-col items-center justify-center space-y-4"> 

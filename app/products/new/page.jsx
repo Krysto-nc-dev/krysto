@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import HeadingPage from '@/components/HeadingPage';
 import {
   Form,
   FormControl,
@@ -52,98 +53,98 @@ const NewProductPage = () => {
   };
 
   return (
-    <section className="container mt-7 min-h-screen bg-gray-100 mt-15">
-      <h1 className="text-3xl font-bold mb-6 text-center">Ajouter un nouveau produit</h1>
-      <div className=" mx-auto bg-white p-20 rounded-lg shadow-lg">
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Nom du produit</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Nom du produit" {...field} />
-                  </FormControl>
-                  <FormDescription>
-                    Le nom sous lequel le produit sera affiché.
-                  </FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="description"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Description</FormLabel>
-                  <FormControl>
-                    <textarea 
-                      placeholder="Description du produit" 
-                      {...field}
-                      className="w-full p-2 border border-gray-300 rounded-md"
-                    />
-                  </FormControl>
-                  <FormDescription>
-                    Une description détaillée du produit.
-                  </FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="price"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Prix</FormLabel>
-                  <FormControl>
-                    <Input type="number" placeholder="Prix" {...field} />
-                  </FormControl>
-                  <FormDescription>
-                    Le prix du produit en euros.
-                  </FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="images"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Images (URL)</FormLabel>
-                  <FormControl>
-                    <Input placeholder="URL des images" {...field} />
-                  </FormControl>
-                  <FormDescription>
-                    Lien vers une image du produit.
-                  </FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
+    <section className="container min-h-screen bg-gray-100 ">
+
+<HeadingPage title={"Ajouter un nouveaux produit"} />
+    <div className="mx-auto bg-white p-8 rounded-lg shadow-lg max-w-4xl mt-6">
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          <div className="flex flex-wrap -mx-2">
+            <div className="w-full md:w-2/3 px-2 mb-4">
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Nom du produit</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Nom du produit" {...field} className="w-full"/>
+                    </FormControl>
+                
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            <div className="w-full md:w-1/3 px-2 mb-4">
+              <FormField
+                control={form.control}
+                name="price"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Prix</FormLabel>
+                    <FormControl>
+                      <Input type="number" placeholder="Prix" {...field} className="w-full"/>
+                    </FormControl>
+           
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+          </div>
+          <FormField
+            control={form.control}
+            name="description"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Description</FormLabel>
+                <FormControl>
+                  <textarea
+                    placeholder="Description du produit"
+                    {...field}
+                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+                  />
+                </FormControl>
+            
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="images"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Images (URL)</FormLabel>
+                <FormControl>
+                  <Input placeholder="URL des images" {...field} className="w-full focus:ring-2 focus:ring-blue-500"/>
+                </FormControl>
+          
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+           <FormField
               control={form.control}
               name="is_featured"
               render={({ field }) => (
-                <FormItem className="flex items-center space-x-2">
-                  <FormControl>
-                    <Input type="checkbox" {...field} />
-                  </FormControl>
+                <FormItem className="flex items-center w-full">
                   <FormLabel>Produit en vedette</FormLabel>
+                  <FormControl>
+                    <Input type="checkbox" {...field} className="scale-50 transform transition-all" />
+                  </FormControl>
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-700 transition">
-              Ajouter le produit
-            </Button>
-          </form>
-        </Form>
-      </div>
-    </section>
+          <Button type="submit" className="w-full bg-blue-500 text-white p-3 rounded-md hover:bg-blue-700 transition">
+            Ajouter le produit
+          </Button>
+        </form>
+      </Form>
+    </div>
+  </section>
+
   );
 };
 

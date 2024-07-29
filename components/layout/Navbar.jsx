@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { FaBars, FaEdit, FaTimes } from 'react-icons/fa';
+import { FaBars, FaEdit, FaTimes, FaWaveSquare } from 'react-icons/fa';
 import { signOut, useSession } from 'next-auth/react';
 import { FaUser, FaEnvelope } from 'react-icons/fa';
 import { MdContactSupport } from 'react-icons/md';
@@ -18,6 +18,7 @@ import {
   MenubarSubTrigger,
   MenubarSubContent,
 } from '@/components/ui/menubar';
+import { LuWaves } from "react-icons/lu";
 import { Avatar, AvatarImage } from '@/components/ui/avatar';
 
 const Navbar = () => {
@@ -46,10 +47,12 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className={`fixed text-primary top-0 left-0 w-full z-50 transition-all duration-300  ${scrolled ? 'bg-transparent bg-opacity-80 backdrop-blur-lg text-gray-800' : 'bg-gray-800'}`}>
+    <header className={`fixed text-primary top-0 left-0 w-full z-50 transition-all duration-300  ${scrolled ? 'bg-transparent bg-opacity-80 backdrop-blur-lg text-black' : 'bg-gray-800'}`}>
       <div className="container mx-auto flex justify-between items-center p-3 flex-col md:flex-row">
         <div className="w-full flex justify-between items-center md:w-auto">
-          <div className="text-2xl font-bold max-md:ml-4">KRYSTO</div>
+          <Link href={'/'} className="text-2xl font-bold max-md:ml-4 flex items-center gap-2">
+          <LuWaves className= "mt-1" /> Krysto
+          </Link>
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
