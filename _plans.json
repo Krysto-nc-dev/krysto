@@ -1,0 +1,45 @@
+[
+    {
+      "_id": "66a70ca383c3cd2d69f7e037",
+      "name": "Basique",
+      "price": 100,
+      "description": "Idéal pour les petites entreprises ou les startups qui débutent avec la gestion de leur responsabilité sociétale des entreprises.",
+      "features": [
+        "Accès au tableau de bord standard",
+        "Rapport partageable sur le web",
+        "Support par email"
+      ],
+      "isPopular": false
+    },
+    {
+      "_id": "66a70ca383c3cd2d69f7e038",
+      "name": "Avancé",
+      "price": 200,
+      "description": "Parfait pour les entreprises qui ont besoin de fonctionnalités avancées et d'une assistance plus approfondie.",
+      "features": [
+        "Tableau de bord personnalisé",
+        "Rapports hebdomadaires",
+        "Support téléphonique",
+        "Intégration de données supplémentaires",
+        "Connexion à des bases de données externes (Excel, SQL, etc.)",
+        "Rapport de 5 pages PDF sur vos actions RSE"
+      ],
+      "isPopular": true
+    },
+    {
+      "_id": "66a70ca383c3cd2d69f7e039",
+      "name": "Entreprise",
+      "price": "Sur mesure",
+      "description": "Conçu pour les grandes organisations nécessitant une solution complète et personnalisée pour leur rapport RSE.",
+      "features": [
+        "Toutes les fonctionnalités avancées",
+        "Support dédié 24/7",
+        "Consultations régulières",
+        "Analyse approfondie des données",
+        "Connexion à des bases de données externes (Excel, SQL, etc.)",
+        "Solutions de gestion et d'analyse de données personnalisées"
+      ],
+      "isPopular": false
+    }
+  ]
+  

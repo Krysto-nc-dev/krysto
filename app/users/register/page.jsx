@@ -17,9 +17,9 @@ const RegisterPage = () => {
       style={{ backgroundImage: `url(${heroImage.src})` }}
     >
       <div className="absolute inset-0 bg-black opacity-30"></div>
-      <div className="relative z-10 w-full max-w-10xl mx-6 p-6 bg-gray-800 bg-opacity-10 backdrop-filter backdrop-blur-md rounded-lg shadow-lg">
-    
-        <form className="space-y-4 m-auto max-w-[480px] flex flex-col">
+      <div className="relative z-10 w-full h-screen    p-10 bg-gray-800 bg-opacity-10 backdrop-filter backdrop-blur-md rounded-lg shadow-lg">
+        <form className="space-y-4 mt-36  mx-auto max-w-[480px] flex flex-col">
+            <h1 className="text-xl">S'inscrire</h1>
           <div className="space-y-1">
             <label htmlFor="email" className="block text-sm font-medium text-gray-300">
               Email

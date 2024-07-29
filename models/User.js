@@ -29,7 +29,7 @@ const UserSchema = new Schema(
     },
     role: {
       type: String,
-      enum: ['user', 'partner', 'reseller'],
+      enum: ['user', 'partner', 'reseller', 'client', 'artisant', 'recycler'],
       default: 'user',
       required: [true, 'Le rôle est requis'],
     },

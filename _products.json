@@ -1,0 +1,36 @@
+[
+    {
+      "_id": "60123abcdef123456789012",
+      "name": "Chaise Eco",
+      "description": "Une chaise durable fabriquée à partir de matériaux recyclés. Parfaite pour les bureaux écologiques.",
+      "price": 85,
+      "images": [
+        "https://example.com/images/chaise-eco1.jpg",
+        "https://example.com/images/chaise-eco2.jpg"
+      ],
+      "is_featured": true
+    },
+    {
+      "_id": "60123abcdef123456789013",
+      "name": "Bouteille Réutilisable",
+      "description": "Bouteille en acier inoxydable pour une hydratation durable tout au long de la journée.",
+      "price": 20,
+      "images": [
+        "https://example.com/images/bouteille1.jpg",
+        "https://example.com/images/bouteille2.jpg"
+      ],
+      "is_featured": false
+    },
+    {
+      "_id": "60123abcdef123456789014",
+      "name": "Sac de Shopping Réutilisable",
+      "description": "Réduisez votre consommation de plastique avec ce sac de shopping réutilisable et robuste.",
+      "price": 15,
+      "images": [
+        "https://example.com/images/sac1.jpg",
+        "https://example.com/images/sac2.jpg"
+      ],
+      "is_featured": false
+    }
+  ]
+  

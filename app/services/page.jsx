@@ -12,13 +12,13 @@ const services = [
     name: "Initiations au recyclage", 
     description: "Découvrez comment recycler efficacement avec nos ateliers pratiques.", 
     image: childImage, // Utilisez directement l'objet image importé
-    link:'/',
+    link:'/services/initiations',
   },
   { 
     name: "Team Building", 
     description: "Renforcez l'esprit d'équipe avec des activités centrées sur le développement durable.", 
     image: buildingImage, // Utilisez directement l'objet image importé
-    link:'/',
+    link:'/services/team-bulding',
 
 
   },
@@ -26,14 +26,14 @@ const services = [
     name: "Conception de moules", 
     description: "Nous concevons des moules sur mesure pour vos projets de recyclage.", 
     image: moldImage, // Utilisez directement l'objet image importé
-    link:'/',
+    link:'/services/conception-de-moules',
 
   },
   { 
     name: "Collecte de plastique", 
     description: "Participez à nos efforts de collecte de plastique pour un environnement plus propre.", 
     image: collecteImage, // Utilisez directement l'objet image importé
-    link:'/',
+    link:'/services/collecte-de-plastique',
  
   },
   { 
@@ -41,7 +41,7 @@ const services = [
     description: "Créez des rapports RSE dynamiques qui mettent en lumière vos initiatives écologiques.", 
     image: rapportImage, // Utilisez directement l'objet image importé
    
-    link:'/'
+    link:'/services/rapport-rse'
    
   },
 ];

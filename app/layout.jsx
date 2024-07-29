@@ -18,7 +18,7 @@ const MainLayout = ({ children }) => {
       <html lang="fr">
         <body>
           <Navbar />
-          <main className='bg-gray-100 min-h-screen '>{children}</main>
+          <main className='bg-gray-300 min-h-screen '>{children}</main>
           <Toaster />
           <Footer />
         </body>
